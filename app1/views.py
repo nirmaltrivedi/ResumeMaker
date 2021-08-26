@@ -10,7 +10,7 @@ def home(request):
     return render(request,'app1/index.html')
 
 def contact(request):
-    form=contact()
+    form = contact()
     if request.POST:
         form = contact(request.POST)
         if form.is_valid():
