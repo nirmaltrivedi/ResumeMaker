@@ -40,6 +40,7 @@
 </head>
 
 <body>
+{% include 'app1/navbar.html' %}
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -171,23 +172,20 @@
               {% csrf_token %}
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" value="{{form.name}}" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
 
                 </div>
-<!--                {{form.name}}-->
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" value="{{form.email}}" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
 
                 </div>
-<!--                {{form.email}}-->
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" value="{{form.subject}}" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject"  placeholder="Subject" required>
 
               </div>
-<!--              {{form.subject}}-->
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" value="{{form.message}}"  placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5"  placeholder="Message" required></textarea>
 
               </div>
               <div class="my-3">
