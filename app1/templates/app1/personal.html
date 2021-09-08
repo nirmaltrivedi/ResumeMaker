@@ -6,25 +6,37 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
+<style>
+  body {
+    text-align: left;
+}
+form {
+    display: inline-block;
+    margin: 0 0 0 100px;
+}
+</style>
 <br><br><br><br>
 <form>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input style="margin-left:50px" type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <br>
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+
+  </div >
+  <div class="form-group row" >
+    <label  for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <input style="margin-left:50px"  type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <br>
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-sm-10">
       <button type="submit" class="btn btn-primary">Sign in</button>
+      <br>
     </div>
   </div>
 </form>
