@@ -36,4 +36,13 @@ def home(request):
 
 
 def personal(request):
-    return render(request,'app1/personal.html')
+    form = PersonalForm()
+    if request.method == "POST":
+        print("hello peter")
+        form = PersonalForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {'form': form}
+    return render(request,'app1/personal.html', context)
