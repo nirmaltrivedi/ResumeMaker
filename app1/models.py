@@ -19,6 +19,7 @@ class PersonalDetail(models.Model):
     email=models.EmailField(max_length=100,null=False,blank=False)
     contact_no=models.PositiveIntegerField(null=False,blank=False)
     city=models.CharField(max_length=50,null=True,blank=True)
+    state=models.CharField(max_length=50,null=True,blank=True)
 
     def __str__(self):
         return self.firstname
