@@ -9,6 +9,7 @@ class ContactForm(ModelForm):
         model = ContactDetail
         fields = '__all__'
 
+
 class PersonalForm(ModelForm):
 
     class Meta:
