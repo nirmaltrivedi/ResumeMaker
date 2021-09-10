@@ -3,8 +3,6 @@ from .forms import *
 from .models import *
 from django.forms import inlineformset_factory
 
-# Create your views here.
-
 
 def home(request):
     form = ContactForm()
@@ -32,3 +30,7 @@ def personal(request):
 
     context = {'form': form}
     return render(request,'app1/personal.html', context)
+
+
+def education(request):
+    return render(request,'app1/education.html')

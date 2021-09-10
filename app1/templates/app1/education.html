@@ -1,0 +1,68 @@
+{% load static %}
+{% include 'app1/base.html' %}
+{% include 'app1/navbar.html' %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+
+<style>
+  body {
+    text-align: left;
+        }
+  form {
+    display: inline-block;
+    margin: 0 0 0 120px;
+        }
+</style>
+<br><br><br><br>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Degree/Study&nbspprogram</label>
+    <div class="col-sm-8">
+      <input type="text" style="margin-left:200px" name="degree"  class="form-control" placeholder="Name of Degree" required>
+        <br>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Institution/Place&nbspof&nbspEducation</label>
+    <div class="col-sm-8">
+      <input type="text" style="margin-left:200px" name="institution" class="form-control" placeholder="Institution name" required>
+        <br>
+    </div>
+  </div>
+    <label>Graduation started:</label>
+      <input type="date" name="started">&nbsp&nbsp&nbsp&nbsp&nbsp
+    <label>Graduation completed:</label>
+      <input type="date" name="completed">
+    <br><br>
+   <div class="form-group row">
+    <label class="col-sm-2 col-form-label">GPA/CGPA/%</label>
+    <div class="col-sm-8">
+      <input type="text" style="margin-left:200px" name="score" class="form-control" placeholder="GPA/CGPA/% in respected course (optional)">
+        <br>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Specific&nbspachievement/rank</label>
+    <div class="col-sm-8">
+      <input type="text" style="margin-left:200px" name="rank" class="form-control" placeholder="Gold medalist/1st rank (optional)">
+    <br>
+    </div>
+  </div>
+  <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" style="margin-left:200px" class="btn btn-primary">Next</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button type="submit" class="btn btn-primary">Add more education</button>
+      </div>
+  </div>
+</form>
+<br><br><br><br>
+
+
+
+{% include 'app1/footer.html' %}
