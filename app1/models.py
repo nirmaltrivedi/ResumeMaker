@@ -34,3 +34,15 @@ class EducationDetail(models.Model):
 
     def __str__(self):
         return self.degree
+
+
+class ExperienceDetail(models.Model):
+    position = models.CharField(max_length=500, blank=False)
+    company = models.CharField(max_length=500, blank=False)
+    job_started = models.DateField(blank=False)
+    job_completed = models.DateField(blank=False)
+    responsibilities = models.CharField(max_length=5000, blank=True)
+    achievements = models.CharField(max_length=2000, blank=True)
+
+    def __str__(self):
+        return self.position

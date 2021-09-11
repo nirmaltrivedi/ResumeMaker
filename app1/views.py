@@ -32,3 +32,7 @@ def personal(request):
 
 def education(request):
     return render(request,'app1/education.html')
+
+
+def experience(request):
+    return render(request,'app1/experience.html')

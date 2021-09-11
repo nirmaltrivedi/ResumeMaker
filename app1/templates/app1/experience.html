@@ -18,49 +18,48 @@
         }
   label{
     font-size:18px;
-    }
+       }
 </style>
 <br><br><br><br>
 <form action="" method="POST">
     {% csrf_token %}
     <div class="form-group row">
-    <label class="col-sm-2 col-form-label" style="font-size:18px">Degree/Study&nbspprogram</label>
+    <label class="col-sm-2 col-form-label" style="font-size:18px">Title/Position</label>
     <div class="col-sm-8">
-      <input type="text" style="margin-left:200px" name="degree"  class="form-control" placeholder="Name of Degree" required>
+      <input type="text" style="margin-left:200px" name="position"  class="form-control" placeholder="Job title" required>
         <br>
     </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label" style="font-size:18px">Institution/Place&nbspof&nbspEducation</label>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label" style="font-size:18px">Company/Workplace</label>
     <div class="col-sm-8">
-      <input type="text" style="margin-left:200px" name="institution" class="form-control" placeholder="Institution name" required>
+      <input type="text" style="margin-left:200px" name="company" class="form-control" placeholder="Company" required>
         <br>
     </div>
-  </div>
-    <label>Graduation started:</label>
-      <input type="date" name="started">&nbsp&nbsp&nbsp&nbsp&nbsp
-    <label>Graduation completed:</label>
-      <input type="date" name="completed">
+    </div>
+    <label>Job started:</label>
+      <input type="date" name="job_started" required>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <label>Job completed:</label>
+      <input type="date" name="job_completed" required>
     <br><br>
-   <div class="form-group row">
-    <label class="col-sm-2 col-form-label" style="font-size:18px">GPA/CGPA/%</label>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label" style="font-size:18px">Job&nbspresponsibilities</label>
     <div class="col-sm-8">
-      <input type="text" style="margin-left:200px" name="score" class="form-control" placeholder="GPA/CGPA/% in respected course (optional)">
+      <input type="text" style="margin-left:200px" name="responsibilities" class="form-control" placeholder="Job responsibilities (optional)" >
         <br>
     </div>
-  </div>
-
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label" style="font-size:18px">Specific&nbspachievement/rank</label>
-    <div class="col-sm-8">
-      <input type="text" style="margin-left:200px" name="rank" class="form-control" placeholder="Gold medalist/1st rank (optional)">
-    <br>
     </div>
-  </div>
-  <div class="form-group row">
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label" style="font-size:18px">Achievements</label>
+    <div class="col-sm-8">
+      <input type="text" style="margin-left:200px" name="achievements" class="form-control" placeholder="Accomplishment (optional)">
+        <br>
+    </div>
+    </div>
+    <div class="form-group row">
       <div class="col-sm-10">
         <button type="submit" style="margin-left:200px" class="btn btn-primary">Next</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-          <button class="btn btn-primary"><a href="{% url 'education' %}" style="color:white">Add more education</a></button>
+          <button class="btn btn-primary"><a href="{% url 'experience' %}" style="color:white">Add more experience</a></button>
       </div>
   </div>
 </form>
