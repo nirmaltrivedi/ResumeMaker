@@ -7,9 +7,7 @@ from django.forms import inlineformset_factory
 def home(request):
     form = ContactForm()
     if request.method == "POST":
-        print("hello peter")
         form = ContactForm(request.POST)
-        print(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/')
